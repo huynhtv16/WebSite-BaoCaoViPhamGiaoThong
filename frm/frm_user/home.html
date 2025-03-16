@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/BTL/assets/css_form_users/home.css">
+<div class="home-container">
+    <h2>Chào mừng đến với Hệ Thống Báo Cáo Vi Phạm Giao Thông</h2>
+    <p>Hãy giúp chúng tôi cải thiện an toàn giao thông bằng cách báo cáo vi phạm.</p>
+    <button class="submit-btn" onclick="showForm()">Báo Cáo Ngay</button>
+</div>
+
+<!-- Bảng thống kê -->
+<div class="stats-container">
+    <div class="stat-box wide">
+        <h3>Báo cáo dễ dàng</h3>
+        <p>Báo cáo vi phạm giao thông nhanh chóng chỉ trong vài bước</p>
+    </div>
+    <div class="stat-box wide">
+        <h3>Kiếm được phần thưởng</h3>
+        <p>Nhận thưởng khi báo cáo hợp lệ</p>
+    </div>
+    <div class="stat-box wide">
+        <h3>Số liệu thống kê</h3>
+        <p>* Tổng số vi phạm báo cáo: 1,234</p>
+        <p>* Tổng phần thưởng đã trả: $12,345</p>
+        <p>* Khu vực vi phạm hàng đầu: Downtown</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <div class="stat-box map-box">
+        <h3>Bản đồ vi phạm</h3>
+        <p>Xem báo cáo gần đây trên bản đồ</p>
+        <div class="map-placeholder">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.637064541317!2d106.67584897593205!3d10.762663459309488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38c74b4fbd%3A0x79b7129a47d3b19a!2zMTIzIMSQLiBBQkMsIFF14bqtbiAxLCBUUC5IQ00!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Form gửi báo cáo -->
+<form id="reportForm" class="report-form" action="/BTL/frm/frm_admin/home.php" method="POST" enctype="multipart/form-data">
+    <!-- Các trường dữ liệu -->
+    <select name="violationType" id="violationType" required>
+        <option value="" disabled selected>Chọn loại vi phạm</option>
+        <option value="Vượt đèn đỏ">Vượt đèn đỏ</option>
+        <option value="Đi ngược chiều">Đi ngược chiều</option>
+        <option value="Vượt quá tốc độ">Vượt quá tốc độ</option>
+        <option value="Không đội mũ bảo hiểm">Không đội mũ bảo hiểm</option>
+        <option value="Chở quá tải">Chở quá tải</option>
+        <option value="Sử dụng điện thoại khi lái xe">Sử dụng điện thoại khi lái xe</option>
+        <option value="Đi xe trên vỉa hè">Đi xe trên vỉa hè</option>
+        <option value="Vấn đề khác">* Vấn đề khác</option>
+    </select>
+    
+    <input type="text" id="plateNumber" name="plateNumber" placeholder="Biển số xe vi phạm" required>
+    
+    <textarea id="description" name="description" placeholder="Mô tả chi tiết" required></textarea>
+    
+    <label for="violationDate">Ngày vi phạm:</label>
+    <input type="date" id="violationDate" name="violationDate" required>
+    
+    <label for="violationTime">Giờ vi phạm:</label>
+    <input type="time" id="violationTime" name="violationTime" required>
+    
+    <input type="text" id="location" name="location" placeholder="Địa điểm vi phạm" required>
+    
+    <input type="file" id="evidence" name="evidence" accept="image/*,video/*">
+    
+    <label for="confirmation">
+        <input type="checkbox" id="confirmation" name="confirmation" required> Xác nhận thông tin đúng sự thật
+    </label>
+    
+    <button type="submit" id="btnGuiBaoCao" name="btnGuiBaoCao">Gửi báo cáo</button>
+    <button type="button" id="cancelButton" class="cancel" onclick="closeForm()">Hủy</button>
+</form>

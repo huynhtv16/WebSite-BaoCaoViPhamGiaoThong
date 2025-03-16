@@ -1,0 +1,77 @@
+/* assets/css_index/styles_admin.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+/* Menu container */
+#menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Main content */
+#content {
+    flex: 1;
+    margin-top: 90px; /* Chiều cao menu + 20px */
+    padding: 2rem 5%;
+    min-height: calc(100vh - 160px); /* 100vh - (menu height + footer height) */
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem 5%;
+    text-align: center;
+    margin-top: auto;
+    z-index: 500;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        margin-top: 70px;
+        padding: 1.5rem;
+        min-height: calc(100vh - 140px);
+    }
+    
+    footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #content {
+        margin-top: 60px;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,93 @@
+/* Thanh menu */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Logo */
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Thanh tìm kiếm */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search-bar input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 230px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background: #f9f9f9;
+    color: #000000;
+}
+.search-bar input:focus {
+    width: 260px;
+    border-color: #ff6600;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.5);
+}
+
+/* Menu bên phải */
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Nút menu */
+.menu button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+/* Hiệu ứng underline */
+.menu button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #ff6600;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.menu button:hover {
+    color: #ff6600;
+}
+.menu button:hover::after {
+    width: 100%;
+}
+
+
+
+

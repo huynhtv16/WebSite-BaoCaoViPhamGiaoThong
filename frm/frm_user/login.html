@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/BTL/assets/css_form_users/login.css">
+</head>
+<body>
+    <div class="popup" id="login-form">
+        <h2>Đăng nhập hoặc đăng ký</h2>
+        <input type="tel" id="phone" placeholder="Số điện thoại" pattern="[0-9]{10,11}" required>
+        <button class="btn" onclick="sendOTP()">Tiếp tục</button>
+    </div>
+    
+    <div class="popup hidden" id="otp-form">
+        <h2>Xác thực mã OTP</h2>
+        <p id="otp-message"></p>
+        <div class="otp-container">
+            <input type="text" id="otp" placeholder="Mã OTP" required>
+            <button class="btn" onclick="requestOTP()">Lấy mã OTP</button>
+        </div>
+        <button class="btn" onclick="verifyOTP()">Xác nhận</button>
+    </div>
+    
+    <script>
+        function sendOTP() {
+            const phone = document.getElementById('phone').value;
+            const phonePattern = /^[0-9]{10,11}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Vui lòng nhập số điện thoại hợp lệ (10-11 số)");
+                return;
+            }
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('otp-form').classList.remove('hidden');
+            document.getElementById('otp-message').innerText = `Nhấn nút Lấy mã OTP để tiếp tục. Mã OTP được gửi đến số điện thoại ${phone}`;
+        }
+        
+        function requestOTP() {
+            alert("Mã OTP mới đã được gửi lại!");
+            // Thực hiện gửi lại mã OTP tại đây
+        }
+
+        function verifyOTP() {
+            const otp = document.getElementById('otp').value;
+            if (otp.length !== 6) {
+                alert("Vui lòng nhập mã OTP hợp lệ (6 số)");
+                return;
+            }
+            alert("Xác thực thành công!");
+            // Thực hiện xác thực OTP tại đây
+        }
+    </script>
+</body>
+</html>

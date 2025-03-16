@@ -1,0 +1,138 @@
+/* assets/css_form_admin/menu.css */
+
+.menu {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-bar input {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #e0e4e9;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.menu-right button {
+    background: none;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #34495e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.menu-right button:hover {
+    background: #f8f9fa;
+    color: #3498db;
+}
+
+.menu-right button:active {
+    transform: scale(0.98);
+}
+
+/* Nút đặc biệt */
+.menu-right button[onclick*="login.php"] {
+    background: #3498db;
+    color: white;
+    margin-left: 1rem;
+}
+
+.menu-right button[onclick*="login.php"]:hover {
+    background: #2980b9;
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.menu-right button:not([onclick*="login.php"])::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: all 0.3s ease;
+}
+
+.menu-right button:not([onclick*="login.php"]):hover::after {
+    width: 60%;
+    left: 20%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .menu {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .search-bar input {
+        width: 200px;
+    }
+    
+    .menu-right {
+        gap: 0.8rem;
+    }
+    
+    .menu-right button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .search-bar {
+        display: none;
+    }
+    
+    .menu-right {
+        display: none; /* Có thể thay thế bằng menu hamburger */
+    }
+    
+    /* Hiển thị menu hamburger */
+    .menu-hamburger {
+        display: block;
+    }
+}

@@ -1,0 +1,121 @@
+/* stats.css */
+.user-statistics-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.user-statistics-container h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    position: relative;
+}
+
+.statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 600px;
+    overflow: hidden;
+}
+
+.statistics-table thead tr {
+    background: #3498db;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.statistics-table th,
+.statistics-table td {
+    padding: 15px 20px;
+}
+
+.statistics-table tbody tr {
+    border-bottom: 1px solid #ecf0f1;
+    transition: all 0.2s ease;
+}
+
+.statistics-table tbody tr:nth-of-type(even) {
+    background-color: #f8fbfd;
+}
+
+.statistics-table tbody tr:last-of-type {
+    border-bottom: 2px solid #3498db;
+}
+
+.statistics-table tbody tr:hover {
+    background-color: #f4f9ff;
+    transform: translateX(5px);
+}
+
+/* Status Badges */
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    min-width: 100px;
+}
+
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.status.approved {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status.rejected {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-statistics-container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .statistics-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .statistics-table th,
+    .statistics-table td {
+        padding: 12px 15px;
+    }
+    
+    .status {
+        min-width: auto;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-statistics-container h2 {
+        font-size: 24px;
+    }
+    
+    .statistics-table th:nth-child(1),
+    .statistics-table td:nth-child(1) {
+        display: none;
+    }
+}

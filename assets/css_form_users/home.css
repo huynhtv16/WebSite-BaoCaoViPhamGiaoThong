@@ -1,0 +1,212 @@
+/* CSS tổng quát */
+
+/* Phần chào mừng */
+.home-container {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-container p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Nút báo cáo */
+.submit-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Bảng thống kê */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin: 20px;
+}
+
+.stat-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.stat-box p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+/* Bản đồ */
+.map-container {
+    padding: 2rem;
+    margin: 20px;
+}
+
+.map-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Form báo cáo */
+.report-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.report-form button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.report-form button[type="submit"]:hover {
+    background-color: #219a52;
+}
+
+.cancel {
+    background-color: #e74c3c;
+    margin-left: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .home-container h2 {
+        font-size: 2rem;
+    }
+    
+    .report-form {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+/* Hiệu ứng form */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.report-form.show {
+    display: block;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Nền mờ khi form hiển thị */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Checkbox tùy chỉnh */
+label[for="confirmation"] {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    color: #666;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    width: auto;
+}
+
+/* File input tùy chỉnh */
+input[type="file"] {
+    padding: 8px;
+    background: #f8f9fa;
+    border: 1px dashed #ddd;
+}
