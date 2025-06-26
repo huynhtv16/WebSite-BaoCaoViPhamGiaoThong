@@ -70,6 +70,7 @@ $conn->close();
     
     <!-- Thống kê theo loại vi phạm (dạng bảng) -->
     <div class="violation-table-container">
+    <a href="export.php" class="export-button">Xuất Excel</a>
         <h3>Thống kê theo loại vi phạm</h3>
         <table class="violation-table">
             <thead>

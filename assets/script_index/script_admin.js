@@ -1,6 +1,6 @@
 // tải menu 
 function loadMenu() {
-    fetch('menu.php')
+    fetch('menu.php')// hàm này dung phương  thức fetch để gửi yêu cấu http đến menu. phpphp
         .then(response => response.text())
         .then(data => document.getElementById('menu-container').innerHTML = data);
 }
@@ -27,15 +27,6 @@ window.onload = function() {
     loadMenu();
     loadPage('home.php');
 };
-//xử lý tiếng anh và tiếng việt
-function changeLanguage(lang) {
-    if (lang === 'vi') {
-        alert("Đã chọn Tiếng Việt 🇻🇳");
-    } else if (lang === 'en') {
-        alert("English selected 🇺🇸");
-    }
-}
-
 
 // Đóng modal
 function closeModal() {
@@ -53,48 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-
-// $(document).ready(function () {
-//     // Khi bấm nút Sửa, đổ dữ liệu sản phẩm vào form
-//     $(".edit-btn").click(function () {
-//         var id = $(this).data("id");
-//         var ten_sp = $(this).data("ten");
-//         var so_luong = $(this).data("sl");
-//         var mo_ta = $(this).data("mota");
-//         var gia_ban = $(this).data("gia");
-//         var ma_danh_muc = $(this).data("madanhmuc");
-
-//         $("input[name='ten_sp']").val(ten_sp);
-//         $("input[name='so_luong']").val(so_luong);
-//         $("input[name='mo_ta']").val(mo_ta);
-//         $("input[name='gia_ban']").val(gia_ban);
-//         $("input[name='ma_danh_muc']").val(ma_danh_muc);
-
-//         // Xóa input ẩn cũ (nếu có) rồi thêm input ẩn mới chứa id sản phẩm
-//         $("input[name='ma_san_pham']").remove();
-//         $("#product-form").append('<input type="hidden" name="ma_san_pham" value="' + id + '">');
-
-//         // Đổi chữ trên nút submit thành "Cập nhật sản phẩm"
-//         $("button[type='submit']").text("Cập nhật sản phẩm");
-//     });
-
-//     // Khi bấm nút Xóa, gửi yêu cầu AJAX để xóa sản phẩm
-//     $(".delete-btn").click(function () {
-//         var id = $(this).data("id");
-//         if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
-//             $.ajax({
-//                 url: "delete.php",
-//                 type: "POST",
-//                 data: { ma_san_pham: id },
-//                 success: function (response) {
-//                     alert(response);
-//                     location.reload();
-//                 }
-//             });
-//         }
-//     });
-// });
 
 
 // Hàm tải danh sách báo cáo
