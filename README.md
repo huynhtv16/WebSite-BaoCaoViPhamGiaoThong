@@ -6,3 +6,5 @@ Giao diện
 <img width="974" height="547" alt="image" src="https://github.com/user-attachments/assets/c31878f0-61c9-4eab-84a9-14c5b76b578b" />
 <img width="723" height="683" alt="image" src="https://github.com/user-attachments/assets/9b530336-0371-4aef-88a5-d63a495564fc" />
 <img width="974" height="853" alt="image" src="https://github.com/user-attachments/assets/63babdce-dece-4d0d-aa38-7a98f67ecd4a" />
+<img width="974" height="583" alt="image" src="https://github.com/user-attachments/assets/70d94475-c023-46a3-9922-62f18dd94396" />
+
