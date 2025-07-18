@@ -48,8 +48,6 @@ TrafficViolationSystem/
 ├── database/             # File SQL khởi tạo CSDL và dữ liệu mẫu
 │
 ├── frm/                  #Chứa giao diện và phần xử lý php
-│
-├── index.php             # Trang chủ
 ```
 ## Hình ảnh minh họa
 <img width="974" height="631" alt="image" src="https://github.com/user-attachments/assets/9a12aeb5-904b-4ab7-8a52-83eb67f927b6" />
