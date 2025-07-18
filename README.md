@@ -47,12 +47,7 @@ TrafficViolationSystem/
 │
 ├── database/             # File SQL khởi tạo CSDL và dữ liệu mẫu
 │
-├── modules/              # Các chức năng chính
-│   ├── report/           # Gửi ảnh báo cáo vi phạm
-│   ├── lookup/           # Tra cứu vi phạm
-│   ├── shop/             # Mua bảo hiểm, mũ bảo hiểm
-│   ├── statistics/       # Thống kê vi phạm
-│   └── admin/            # Quản trị (quản lý biên bản và người dùng)
+├── frm/                  #Chứa giao diện và phần xử lý php
 │
 ├── index.php             # Trang chủ
 ```
