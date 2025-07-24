@@ -29,9 +29,9 @@
 ## Công nghệ sử dụng
 
 - **Giao diện (Frontend):** HTML, CSS (Bootstrap), JavaScript  
-- **Xử lý (Backend):** PHP (hoặc Java tùy theo triển khai)  
+- **Xử lý (Backend):** PHP 
 - **Cơ sở dữ liệu:** MySQL (quản lý bằng phpMyAdmin)  
-- **Công cụ hỗ trợ:** Visual Studio Code, XAMPP (hoặc môi trường tương tự)
+- **Công cụ hỗ trợ:** Visual Studio Code, XAMPP 
 
 ---
 
