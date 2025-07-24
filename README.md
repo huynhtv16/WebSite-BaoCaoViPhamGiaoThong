@@ -31,7 +31,7 @@
 - **Giao diện (Frontend):** HTML, CSS (Bootstrap), JavaScript  
 - **Xử lý (Backend):** PHP 
 - **Cơ sở dữ liệu:** MySQL (quản lý bằng phpMyAdmin)  
-- **Công cụ hỗ trợ:** Visual Studio Code, XAMPP 
+- **Công cụ hỗ trợ:** Visual Studio Code, Wamp 
 
 ---
 
